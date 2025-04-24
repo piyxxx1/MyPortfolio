@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         enableDarkMode();
     }
     
-    // Continue with existing DOMContentLoaded code
+    // Smooth scrolling navigation
     const navLinks = document.querySelectorAll('.nav-links a');
     
     navLinks.forEach(link => {
@@ -96,24 +96,3 @@ function handleFormSubmit(event) {
     // Reset the form
     document.querySelector('.contact-form').reset();
 }
-
-// Add smooth scrolling for navigation links
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-links a');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            window.scrollTo({
-                top: targetSection.offsetTop - 70, // Adjust for header height
-                behavior: 'smooth'
-            });
-        });
-    });
-});
-
-
