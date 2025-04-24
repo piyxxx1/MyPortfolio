@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piyush Jha | Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Piyush Jha</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="assests\my dp.jpeg" alt="Piyush Jha" class="profile-image">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span class="highlight">Piyush Jha</span></h1>
+                    <p>Aspiring Data Scientist & Developer with a passion for AI, Machine Learning, and Data Analysis.</p>
+                    <div>
+                        <a href="#contact" class="btn">Get In Touch</a>
+                        <a href="assests\Resume.docx" class="btn btn-outline" style="margin-left: 1rem;" onclick="openResumeModal()">Download Resume</a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/piyxxx1" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.hackerrank.com/profile/piyushjha9001" target="_blank" title="HackerRank"><i class="fab fa-hackerrank"></i></a>
+                        <a href="https://www.linkedin.com/in/piyuxx1" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:Piyushjha9001@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+918588091122" title="Call"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I am a Bachelor of Computer Application student with a strong interest in data science, machine learning, and software development. With a solid foundation in Python programming and data analysis tools, I am passionate about leveraging technology to solve real-world problems.</p>
+                <p>My technical expertise includes Python programming, database management with PostgreSQL, and working with various machine learning and data science libraries. I continuously enhance my skills through certifications and practical projects.</p>
+                <p>Currently pursuing my BCA degree at Chaudhary Charan Singh University, I am looking for opportunities to apply my skills in real-world settings and contribute to innovative projects.</p>
+                <div class="download-resume">
+                    <a href="#" class="btn">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-card">
+                <h3>Bachelor of Computer Application</h3>
+                <div class="institution">Chaudhary Charan Singh University, Noida, India</div>
+                <div class="duration">September 2023 - Present</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-list">
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">R</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <div class="skill-list">
+                        <span class="skill-pill">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Libraries</h3>
+                    <div class="skill-list">
+                        <span class="skill-pill">Scikit-Learn</span>
+                        <span class="skill-pill">TensorFlow</span>
+                        <span class="skill-pill">Matplotlib</span>
+                        <span class="skill-pill">Seaborn</span>
+                        <span class="skill-pill">Plotly</span>
+                        <span class="skill-pill">NumPy</span>
+                        <span class="skill-pill">Pandas</span>
+                        <span class="skill-pill">SciPy</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks</h3>
+                    <div class="skill-list">
+                        <span class="skill-pill">Flask</span>
+                        <span class="skill-pill">FastAPI</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-list">
+                        <span class="skill-pill">Git</span>
+                        <span class="skill-pill">VSCode</span>
+                        <span class="skill-pill">PyCharm</span>
+                        <span class="skill-pill">Colab</span>
+                        <span class="skill-pill">Kaggle</span>
+                        <span class="skill-pill">Jupyter Notebook</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Operating Systems</h3>
+                    <div class="skill-list">
+                        <span class="skill-pill">Linux</span>
+                        <span class="skill-pill">Windows</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Mathematics for ML & DL</h3>
+                    <div class="skill-list">
+                        <span class="skill-pill">Algebra</span>
+                        <span class="skill-pill">Probability</span>
+                        <span class="skill-pill">Statistics</span>
+                        <span class="skill-pill">Calculus</span>
+                        <span class="skill-pill">Vectors</span>
+                        <span class="skill-pill">Matrices</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-list">
+                        <span class="skill-pill">Creative Thinking</span>
+                        <span class="skill-pill">Good Communication</span>
+                        <span class="skill-pill">Teamwork</span>
+                        <span class="skill-pill">Time Management</span>
+                        <span class="skill-pill">Adaptability</span>
+                        <span class="skill-pill">Problem Solving</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Coming Soon</h3>
+                        <p>Working on exciting new projects. Check back soon for updates!</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline">Coming Soon</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Coming Soon</h3>
+                        <p>Working on exciting new projects. Check back soon for updates!</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline">Coming Soon</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Project Coming Soon</h3>
+                        <p>Working on exciting new projects. Check back soon for updates!</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline">Coming Soon</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2>Certificates</h2>
+            <div class="certificate-grid">
+                <div class="certificate-card">
+                    <h3>SQL FOR DATA SCIENCE</h3>
+                    <div class="org">UNIVERSITY OF CALIFORNIA</div>
+                    <div class="year">2024</div>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/BSF680X5IKZT" target="_blank">View Certificate</a>
+                </div>
+                <div class="certificate-card">
+                    <h3>SKILL CERTIFICATIONS</h3>
+                    <div class="org">HACKERRANK</div>
+                    <div class="year">2024</div>
+                    <a href="https://www.hackerrank.com/certificates/741e87e58343" target="_blank">View Certificate</a>
+                </div>
+                <div class="certificate-card">
+                    <h3>PYTHON</h3>
+                    <div class="org">UDEMY</div>
+                    <div class="year">2023</div>
+                    <a href="assests\PYTHON BASIC TO ADVANCE.pdf" target="_blank">View Certificate</a>
+                </div>
+                <div class="certificate-card">
+                    <h3>HACKERTHON</h3>
+                    <div class="org">IIMT</div>
+                    <div class="year">2024</div>
+                    <a href="assests\IIMT_HACKERTHON.png" target="_blank">View Certificate</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-content">
+                <p>Feel free to reach out to me through the following contact information or by filling out the form below:</p>
+                <div class="social-icons">
+                    <a href="mailto:Piyushjha9001@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+918588091122" title="Call"><i class="fas fa-phone"></i></a>
+                    <a href="https://github.com/piyxxx1" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.hackerrank.com/profile/piyushjha9001" target="_blank" title="HackerRank"><i class="fab fa-hackerrank"></i></a>
+                    <a href="https://www.linkedin.com/in/piyuxx1" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Piyush Jha. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="https://github.com/piyxxx1" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.hackerrank.com/profile/piyushjha9001" target="_blank" title="HackerRank"><i class="fab fa-hackerrank"></i></a>
+                <a href="https://www.linkedin.com/in/piyuxx1" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:Piyushjha9001@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+<script src="script.js" defer></script>
+</html>
