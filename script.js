@@ -84,15 +84,21 @@ function handleFormSubmit(event) {
     event.preventDefault();
     
     // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
     
+    // Basic validation (optional)
+    if (!name || !email || !subject || !message) {
+        alert('Please fill out all fields before submitting.');
+        return;
+    }
+
     // In a real application, you would send this data to a server
     // For now, we'll just show an alert
     alert('Message sent successfully!');
-    
+
     // Reset the form
     document.querySelector('.contact-form').reset();
 }
