@@ -16,6 +16,7 @@ window.onclick = function(event) {
         modal.style.display = 'none';
     }
 }
+
 // Dark mode functionality
 let darkMode = localStorage.getItem('darkMode') === 'enabled';
 
@@ -79,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Form submission handler
+// Enhanced Form submission handler with multiple email options
 function handleFormSubmit(event) {
     event.preventDefault();
     
@@ -89,16 +90,64 @@ function handleFormSubmit(event) {
     const subject = document.getElementById('subject').value.trim();
     const message = document.getElementById('message').value.trim();
     
-    // Basic validation (optional)
+    // Basic validation
     if (!name || !email || !subject || !message) {
         alert('Please fill out all fields before submitting.');
         return;
     }
 
-    // In a real application, you would send this data to a server
-    // For now, we'll just show an alert
-    alert('Message sent successfully!');
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
 
-    // Reset the form
-    document.querySelector('.contact-form').reset();
+    // Show loading state
+    const submitButton = event.target.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+    submitButton.textContent = 'Sending...';
+    submitButton.disabled = true;
+
+    // Using EmailJS (Recommended for client-side)
+    sendEmailWithEmailJS(name, email, subject, message, submitButton, originalText);
+    
+}
+
+     // EmailJS Integration (You need to set up EmailJS account)
+function sendEmailWithEmailJS(name, email, subject, message, submitButton, originalText) {
+    // EmailJS configuration - Replace with your actual values
+    const serviceID = 'service_bpftjd7'; // Replace with your EmailJS service ID
+    const templateID = 'template_rluv2bn'; // Replace with your EmailJS template ID
+    const userID = 't5NSUDaKsaKPLR-fW'; // Replace with your EmailJS user ID
+
+    // Check if EmailJS is loaded
+    if (typeof emailjs === 'undefined') {
+        console.error('EmailJS not loaded. Falling back to mailto.');
+        sendEmailWithMailto(name, email, subject, message, submitButton, originalText);
+        return;
+    }
+
+    const templateParams = {
+        from_name: name,
+        from_email: email,
+        subject: subject,
+        message: message,
+        to_email: 'Piyushjha9001@gmail.com' // Your email
+    };
+
+    emailjs.send(serviceID, templateID, templateParams, userID)
+        .then(function(response) {
+            console.log('Email sent successfully:', response);
+            alert('Message sent successfully! I will get back to you soon.');
+            document.querySelector('.contact-form').reset();
+        })
+        .catch(function(error) {
+            console.error('EmailJS error:', error);
+            alert('Failed to send message. Please try again or contact me directly.');
+        })
+        .finally(function() {
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+        });
 }
