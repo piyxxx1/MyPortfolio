@@ -654,3 +654,273 @@
                 height: 200px;
             }
         }
+        
+        /* Buy Me a Coffee Section */
+        .buy-me-coffee {
+            background-color: var(--white);
+            color: var(--dark);
+            padding: 4rem 0;
+        }
+        
+        .coffee-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .coffee-header-image {
+            width: 280px;
+            height: 90px;
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(5, 102, 212, 0.2);
+            transition: all 0.3s ease;
+            object-fit: contain;
+            border: none;
+            background: transparent;
+        }
+        
+        .coffee-header-image:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(5, 102, 212, 0.3);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .coffee-header h2 {
+            margin: 0;
+            color: var(--dark);
+        }
+        
+        .coffee-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .coffee-content p {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: var(--secondary);
+        }
+        
+        .coffee-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .coffee-option {
+            background-color: var(--light);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .coffee-option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(5, 102, 212, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .coffee-option:hover::before {
+            left: 100%;
+        }
+        
+        .coffee-option:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(5, 102, 212, 0.2);
+            border-color: var(--primary);
+            background-color: rgba(5, 102, 212, 0.05);
+        }
+        
+        .coffee-option i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .coffee-option h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+        
+        .coffee-option p {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 0;
+        }
+        
+        /* Dark theme support for coffee section */
+        .dark-theme .buy-me-coffee {
+            background-color: #1e1e1e;
+            color: var(--dark);
+        }
+        
+        .dark-theme .coffee-option {
+            background-color: #2d2d2d;
+            border-color: transparent;
+        }
+        
+        .dark-theme .coffee-option:hover {
+            background-color: rgba(30, 136, 229, 0.1);
+            border-color: #1e88e5;
+            box-shadow: 0 15px 35px rgba(30, 136, 229, 0.2);
+        }
+        
+        .dark-theme .coffee-option i {
+            color: #1e88e5;
+        }
+        
+        .dark-theme .coffee-option h3 {
+            color: #f4f4f8;
+        }
+        
+        .dark-theme .coffee-option p {
+            color: #1e88e5;
+        }
+        
+        .dark-theme .coffee-header h2 {
+            color: #f4f4f8;
+        }
+        
+        /* Custom Amount Option Styling */
+        .custom-amount-option {
+            cursor: default !important;
+        }
+        
+        .custom-amount-option:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(5, 102, 212, 0.2);
+            border-color: var(--primary);
+            background-color: rgba(5, 102, 212, 0.05);
+        }
+        
+        .custom-input-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        
+        .custom-input-container input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            background-color: var(--white);
+            color: var(--dark);
+            text-align: center;
+        }
+        
+        .custom-input-container input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(5, 102, 212, 0.1);
+        }
+        
+        .custom-pay-btn {
+            padding: 0.6rem 1.2rem;
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            min-width: 80px;
+        }
+        
+        .custom-pay-btn:hover {
+            background-color: #0452a8;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(5, 102, 212, 0.3);
+        }
+        
+        .custom-pay-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        /* Dark theme support for custom amount option */
+        .dark-theme .custom-amount-option:hover {
+            background-color: rgba(30, 136, 229, 0.1);
+            border-color: #1e88e5;
+            box-shadow: 0 15px 35px rgba(30, 136, 229, 0.2);
+        }
+        
+        .dark-theme .custom-input-container input {
+            background-color: #3d3d3d;
+            border-color: #444;
+            color: #f4f4f8;
+        }
+        
+        .dark-theme .custom-input-container input:focus {
+            border-color: #1e88e5;
+            box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1);
+        }
+        
+        /* Responsive design for coffee section */
+        @media (max-width: 768px) {
+            .coffee-options {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .coffee-option {
+                padding: 1.5rem;
+            }
+            
+            .coffee-option i {
+                font-size: 2.5rem;
+            }
+            
+            .coffee-option h3 {
+                font-size: 1.3rem;
+            }
+            
+            .coffee-option p {
+                font-size: 1.5rem;
+            }
+            
+            .custom-input-container {
+                gap: 0.6rem;
+            }
+            
+            .custom-input-container input {
+                padding: 0.6rem;
+                font-size: 0.9rem;
+            }
+            
+            .custom-pay-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+            
+            .coffee-header-image {
+                width: 220px;
+                height: 70px;
+                margin-bottom: 1rem;
+                border: none;
+                background: transparent;
+            }
+        }
